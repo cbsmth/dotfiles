@@ -1,0 +1,4 @@
+startup_message off
+defencoding UTF-8
+defutf8 on
+setenv LC_CTYPE en_US.UTF-8

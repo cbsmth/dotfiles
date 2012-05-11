@@ -1,0 +1,5 @@
+syntax: glob
+
+*.un~
+.wmii/history.actions
+.wmii/history.progs

@@ -1,0 +1,13 @@
+[ui]
+username = Fredrik Karlström <fredrik@cbsmth.se>
+editor = vim
+merge = vimdiff
+
+[extensions]
+prompt = /home/fredrik/bin/hg-prompt/prompt.py
+progress = 
+graphlog =
+
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d $base $local $output $other +close +close
