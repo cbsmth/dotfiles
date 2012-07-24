@@ -15,7 +15,7 @@ cd $dfdir
 
 # Symlink dotfiles from ~/
 echo "Installing dotfiles.\n---"
-for filename in `ls -ABd .* |grep -Ev "^(\.hg|\.hgignore|\.|\.\.)$"`
+for filename in `ls -ABd .* |grep -Ev "^(\.hg|\.hgignore|\.git|\.gitignore|\.|\.\.)$"`
 do
 	if [ -f ~/$filename ]
 	then
