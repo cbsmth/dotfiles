@@ -24,7 +24,7 @@ export WMII_NORMCOLORS='#cccccc #444444 #333333'
 export WMII_FOCUSCOLORS='#ffffff #285577 #4c7899'
 
 #export WMII_BACKGROUND='#333333'
-xloadimage -onroot /home/fredrik/Pictures/wallpaper/d3_demon_hunter.jpg &
+xloadimage -onroot /home/fredrik/Pictures/wallpaper/archlinux.jpg &
 export WMII_FONT='-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
 
 set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
