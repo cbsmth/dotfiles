@@ -1,6 +1,7 @@
 filetype off
 filetype plugin indent on
 syntax on
+colorscheme paintbox
 call pathogen#infect()
 set nocompatible
 set modelines=0

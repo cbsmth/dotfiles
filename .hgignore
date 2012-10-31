@@ -1,0 +1,6 @@
+syntax: glob
+
+*.un~
+*.swp
+*.swo
+*.tmp

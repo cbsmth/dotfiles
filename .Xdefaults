@@ -3,12 +3,12 @@ URxvt*scrollBar: false
 URxvt*saveLines: 1024
 URxvt.perl-ext-common: default,matcher
 URxvt.matcher.button: 1
-URxvt.urlLauncher: /usr/bin/google-chrome
+URxvt.urlLauncher: /usr/bin/chromium
 !URxvt*perl-ext: default,url-select
 !URxvt*keysym.M-u: perl:url-select:select_next
-URxvt*urlLauncher: chromium
 URxvt*underlineURLs: true
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=11:antialias=false
+!URxvt.font: xft:DejaVu Sans Mono:pixelsize=11:antialias=false
+URxvt.font: xft:Terminus:pixelsize=12:antialias=false
 URxvt*foreground: #fcfcfc
 URxvt*background: #212121
 URxvt*colorBD: #ffffff
