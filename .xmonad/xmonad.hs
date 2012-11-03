@@ -28,5 +28,5 @@ main = do
         }
     } `additionalKeys`
         [
-            ((controlMask .|. mod1Mask, xK_l), spawn "xscreensaver-command -lock")
+            ((controlMask .|. mod1Mask, xK_l), spawn "slock")
         ]

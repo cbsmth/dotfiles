@@ -4,3 +4,6 @@ syntax: glob
 *.swp
 *.swo
 *.tmp
+.oh-my-zsh/cache
+.xmonad/xmonad-x86_64-linux
+.xmonad/xmonad.o
