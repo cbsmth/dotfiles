@@ -9,3 +9,4 @@ syntax: glob
 .xmonad/xmonad.o
 .xmonad/xmonad.errors
 .xmonad/xmonad.hi
+.vim/.netrwhist
