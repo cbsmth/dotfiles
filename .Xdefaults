@@ -1,4 +1,4 @@
-URxvt*termName: xterm
+URxvt*termName: rxvt-unicode-256color
 URxvt*scrollBar: false
 URxvt*saveLines: 1024
 URxvt.perl-ext-common: default,matcher
