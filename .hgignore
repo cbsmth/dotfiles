@@ -10,3 +10,4 @@ syntax: glob
 .xmonad/xmonad.errors
 .xmonad/xmonad.hi
 .vim/.netrwhist
+.git

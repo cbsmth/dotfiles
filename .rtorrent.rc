@@ -1,0 +1,6 @@
+directory = /home/fredrik/downloads/
+session = /home/fredrik/downloads/.rtorrent-session/
+
+schedule = watch_directory,10,10,load_start=/home/fredrik/downloads/rtorrent-watch/*.torrent
+schedule = tied_directory,10,10,start_tied=
+schedule = untied_directory,10,10,close_untied=
