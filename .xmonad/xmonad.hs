@@ -17,8 +17,8 @@ main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ defaultConfig {
 		terminal = "urxvt",
-		workspaces = ["1:main", "2:web", "3:irc", "4", "5", "6:gimp"],
-		modMask = mod1Mask,
+		workspaces = ["1","2","3","4","5","6","7","8","9"],
+		modMask = mod4Mask,
         manageHook = manageDocks <+> manageHook defaultConfig,
         --layoutHook = smartBorders (avoidStruts $ layoutHook defaultConfig),
         layoutHook = avoidStruts $ smartBorders $ layoutHook defaultConfig,
