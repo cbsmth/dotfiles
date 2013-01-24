@@ -45,13 +45,14 @@ function bugcount {
 	fi
 }
 
-function promptchar {
-	hg root >/dev/null 2>/dev/null && echo '☿' && return
-	echo '○'
-}
+#function promptchar {
+#	hg root >/dev/null 2>/dev/null && echo '☿' && return
+#	echo '○'
+#}
 
 # Prompt
 # ======
 export PROMPT="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%d% > "
-export RPROMPT="[$(promptchar)|$(bugcount)|$(taskcount)]"
+export RPROMPT="[$(bugcount)|$(taskcount)]"
+#export RPROMPT="[$(promptchar)|$(bugcount)|$(taskcount)]"
 
