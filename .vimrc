@@ -1,7 +1,7 @@
 filetype off
 filetype plugin indent on
 syntax on
-colorscheme jellybeans
+colorscheme lfk
 call pathogen#infect()
 set nocompatible
 set modelines=0

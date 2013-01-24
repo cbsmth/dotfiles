@@ -1,43 +1,57 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+autoload -U colors compinit
+colors
+compinit
 
-# Set name of the theme to load.
-ZSH_THEME="lfk"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
+# =======
+alias ls="ls --color"
+alias ll="ls -lah"
+alias lh="ls -Ad .*"
+alias l="ls"
 alias hyde="/home/fredrik/bin/hyde/hyde.py"
 alias t="python2 /home/fredrik/bin/t/t.py --task-dir ~/bin/t/tasks --list tasks"
 alias b="python2 /home/fredrik/bin/t/t.py --task-dir . --list .bugs"
-alias lh='ls -Ad .*'
 
-# Kill autocorrection
+# Variables
+# =========
+export EDITOR="vim"
+export VISUAL="vim"
+
+# Tab completion
+# ==============
+zstyle ':completion:*' menu select
+zstyle ':completion:*:descriptions' format '%B%d%b'
+zstyle ':completion:*' list-colors ${(s/:/)LS_COLORS}
+zstyle ':completion:*:*:kill*:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
+zstyle ':completion:*:*:kill*:*' menu yes select
+
+# Misc fixes
+# ==========
 unsetopt correct_all
+bindkey -v
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+# Functions
+# =========
+function taskcount {
+	echo $(t |wc -l | sed -e's/ *//')
+}
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+function bugcount {
+	count=$(b | wc -l | sed -e's/ *//')
+	if [[ $count == 0 ]]; then
+		echo %{$fg[green]%}0%{$reset_color%}
+	else
+		echo %{$fg[red]%}0%{$reset_color%}
+	fi
+}
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+function promptchar {
+	hg root >/dev/null 2>/dev/null && echo '☿' && return
+	echo '○'
+}
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# Prompt
+# ======
+export PROMPT="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%d% > "
+export RPROMPT="[$(promptchar)|$(bugcount)|$(taskcount)]"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-#plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-
-# A simple greeting when opening the shell
-#python /home/fredrik/bin/mi-insults/insult.py
