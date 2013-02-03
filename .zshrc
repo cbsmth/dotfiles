@@ -27,8 +27,14 @@ zstyle ':completion:*:*:kill*:*' menu yes select
 
 # Misc fixes
 # ==========
+setopt AUTO_CD
 unsetopt correct_all
+
+# Key bindings
+# ============
 bindkey -v
+bindkey "^R" history-incremental-search-backward
+bindkey -s '^U' 'cd ..; ls^M'
 
 # Functions
 # =========
@@ -52,7 +58,7 @@ function bugcount {
 
 # Prompt
 # ======
-export PROMPT="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%d% > "
+export PROMPT="%{$fg[blue]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%~> "
 export RPROMPT="[$(bugcount)|$(taskcount)]"
 #export RPROMPT="[$(promptchar)|$(bugcount)|$(taskcount)]"
 
