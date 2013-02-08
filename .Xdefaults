@@ -1,11 +1,11 @@
 URxvt*termName: rxvt-unicode-256color
 URxvt*scrollBar: false
 URxvt*saveLines: 1024
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.matcher.button: 1
 URxvt.urlLauncher: /usr/bin/chromium
-!URxvt*perl-ext: default,url-select
-!URxvt*keysym.M-u: perl:url-select:select_next
+URxvt*perl-ext: default,url-select
+URxvt*keysym.M-u: perl:url-select:select_next
 URxvt*underlineURLs: true
 !URxvt.font: xft:DejaVu Sans Mono:pixelsize=11:antialias=false
 URxvt.font: xft:Terminus:pixelsize=12:antialias=false
