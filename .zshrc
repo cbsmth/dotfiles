@@ -11,9 +11,15 @@ alias l="ls"
 alias hyde="/home/fredrik/bin/hyde/hyde.py"
 alias t="python2 /home/fredrik/bin/t/t.py --task-dir ~/bin/t/tasks --list tasks"
 alias b="python2 /home/fredrik/bin/t/t.py --task-dir . --list .bugs"
+alias tvon="xrandr --output HDMI-0 --mode 1920x1080 --pos 1368x0 && xrandr --output LVDS --mode 1366x768 && feh --bg-fill /home/fredrik/media/pictures/wallpaper/one\ piece/suits.jpg"
+alias tvoff="xrandr --output HDMI-0 --off"
+alias matlab="wmname LG3D && ~/bin/matlab/bin/matlab"
+alias uimlist="uim-toolbar-gtk"
 
 # Variables
 # =========
+export LC_CTYPE="en_US.UTF-8"
+export TERM="rxvt-unicode-256color"
 export EDITOR="vim"
 export VISUAL="vim"
 
