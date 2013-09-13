@@ -1,0 +1,2 @@
+--pager=LESS=FSRX less -r
+--ignore-dir=venv
