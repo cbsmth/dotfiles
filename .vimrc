@@ -1,9 +1,9 @@
+call pathogen#infect()
+syntax on
 filetype off
 filetype plugin indent on
-syntax on
-colorscheme lfk
-call pathogen#infect()
 set nocompatible
+set t_Co=256
 set modelines=0
 set ts=4
 set shiftwidth=4
@@ -27,7 +27,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set undofile
-nnoremap <F5> :GundoToggle<CR>
+"nnoremap <F5> :GundoToggle<CR>
 let mapleader = ","
 nnoremap/ /\v
 vnoremap/ /\v
@@ -51,3 +51,6 @@ nnoremap<C-h> <C-w>h
 nnoremap<C-j> <C-w>j
 nnoremap<C-k> <C-w>k
 nnoremap<C-l> <C-w>l
+
+set background=dark
+colorscheme solarized

@@ -5,8 +5,10 @@ merge = vimdiff
 
 [extensions]
 prompt = /home/fredrik/bin/hg-prompt/prompt.py
+hgext.bookmarks =
 progress = 
 graphlog =
+hggit =
 
 [merge-tools]
 vimdiff.executable = vim
