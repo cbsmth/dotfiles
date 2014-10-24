@@ -54,3 +54,5 @@ nnoremap<C-l> <C-w>l
 
 set background=dark
 colorscheme solarized
+
+set wildignore=*.class,*.un~,*.tmp
