@@ -14,12 +14,13 @@ alias top="htop"
 alias t="python2 /home/fredrik/bin/t/t.py --task-dir ~/bin/t/tasks --list tasks"
 alias b="python2 /home/fredrik/bin/t/t.py --task-dir . --list .bugs"
 alias tvon="xrandr --output HDMI-0 --mode 1920x1080 --pos 1368x0 && xrandr --output LVDS --mode 1366x768 && feh --bg-fill /home/fredrik/media/pictures/wallpaper/cubic.jpg"
-alias workon="xrandr --output VGA-0 --mode 1680x1050 --left-of LVDS && xrandr --output LVDS --mode 1366x768 && feh --bg-fill /home/fredrik/media/pictures/wallpaper/chrono-trinity1920x1080.jpg"
+alias workon="xrandr --output VGA-0 --mode 1680x1050 --left-of LVDS --rotate right && xrandr --output LVDS --mode 1366x768 && feh --bg-fill /home/fredrik/media/pictures/wallpaper/chrono-trinity1920x1080.jpg"
 alias tvoff="xrandr --output HDMI-0 --off"
 alias workoff="xrandr --output VGA-0 --off"
 alias matlab="wmname LG3D && ~/bin/matlab/bin/matlab"
 alias mendeley="~/bin/mendeleydesktop/bin/mendeleydesktop"
 alias uimlist="uim-toolbar-gtk"
+alias postman="chromium --app-id=fhbjgbiflinjbdggehcddcbncdddomop"
 
 # Variables
 # =========
