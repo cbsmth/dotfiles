@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Actions.UpdatePointer
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
@@ -20,12 +21,11 @@ main = do
 		workspaces = ["1","2","3","4","5","6","7","8","9"],
 		modMask = mod4Mask,
         manageHook = manageDocks <+> manageHook defaultConfig,
-        --layoutHook = smartBorders (avoidStruts $ layoutHook defaultConfig),
         layoutHook = avoidStruts $ smartBorders $ layoutHook defaultConfig,
         logHook = dynamicLogWithPP xmobarPP {
             ppOutput = hPutStrLn xmproc,
             ppTitle = xmobarColor "green" "" . shorten 50
-        }
+        } >> updatePointer (Relative 0.75 0.85)
     } `additionalKeys`
         [
             ((controlMask .|. mod1Mask, xK_l), spawn "slock"),

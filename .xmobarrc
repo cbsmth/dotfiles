@@ -1,14 +1,14 @@
 Config {
-    font = "xft:Fixed-8",
+    font = "xft:Fixed-9",
     bgColor = "#000000",
     fgColor = "#efefef",
-    position = TopW L 100,
+    position = TopW L 90,
     lowerOnStart = True,
     commands = [ 
         Run MultiCpu ["-t","CPU: <total0>% <total1>% <total2>% <total3>%","-L","30","-H","60","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC","-w","3"] 10,
         Run Memory ["-t","Mem: <usedratio>%"] 10,
         Run Date "%a %b %_d %H:%M" "date" 10,
-        Run Network "wlan0" ["-t","Net: <rx>, <tx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
+        Run Network "wlp4s0" ["-t","Net: <rx>, <tx>","-H","200","-L","10","-h","#FFB6B0","-l","#CEFFAC","-n","#FFFFCC"] 10,
         Run BatteryP ["BAT1"]["-t","Battery: <left>% (<acstatus>)","-L","50","-H","75","-h","green","-n","yell","-l","red"] 10,
         Run CoreTemp ["-t","<core0>C","-L","40","-H","65","-l","lightblue","-n","gray90","-h","red"] 50,
         Run CpuFreq ["-t","<cpu0>","-L","0","-H","2","-l","lightblue","-n","white","-h","red"] 50,
@@ -16,5 +16,6 @@ Config {
     ],
     sepChar = "%",
     alignSep = "}{",
-    template = "  %StdinReader% }{ %multicpu% (%cpufreq%, %coretemp%) | %memory% | %wlan0% | %battery%          <fc=#ee9a00>%date%</fc>  "
+--    template = " %StdinReader% }{ %multicpu% | %memory% | %wlp4s0%"
+    template = "  %StdinReader% }{ %multicpu% (%cpufreq%, %coretemp%) | %memory% | %wlp4s0% | %battery%          <fc=#ee9a00>%date%</fc>  "
 }

@@ -1,3 +1,5 @@
+let g:airline_powerline_fonts=1
+
 call pathogen#infect()
 syntax on
 filetype off
@@ -6,6 +8,7 @@ set nocompatible
 set t_Co=256
 set modelines=0
 set ts=4
+set expandtab
 set shiftwidth=4
 set softtabstop=4
 set number
@@ -56,3 +59,9 @@ set background=dark
 colorscheme solarized
 
 set wildignore=*.class,*.un~,*.tmp
+set colorcolumn=80
+
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+com! FormatJSON %!python -m json.tool

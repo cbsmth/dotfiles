@@ -2,3 +2,8 @@ startup_message off
 defencoding UTF-8
 defutf8 on
 setenv LC_CTYPE en_US.UTF-8
+term screen-256color
+vbell on
+vbell_msg "Bell on %t (%n)"
+activity "Activity in %t (%n)"
+hardstatus alwayslastline '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
