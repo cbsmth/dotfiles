@@ -40,6 +40,11 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+nnoremap<silent><Tab> @=(foldlevel('.')?'za':"\<Tab>")<cr>
 nnoremap<leader><space> :noh<cr>
 nnoremap<up> <nop>
 nnoremap <down> <nop>
