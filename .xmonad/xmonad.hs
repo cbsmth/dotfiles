@@ -11,6 +11,8 @@ import System.IO
 myManageHook = composeAll
     [
         className =? "Gimp" --> doFloat,
+        className =? "Wireshark" --> doFloat,
+        className =? "Salae Logic Softwre" --> doFloat,
 		isFullscreen --> doFullFloat
     ]
 
@@ -19,13 +21,13 @@ main = do
     xmonad $ defaultConfig {
 		terminal = "urxvt",
 		workspaces = ["1","2","3","4","5","6","7","8","9"],
-		modMask = mod4Mask,
+		modMask = mod1Mask,
         manageHook = manageDocks <+> manageHook defaultConfig,
         layoutHook = avoidStruts $ smartBorders $ layoutHook defaultConfig,
         logHook = dynamicLogWithPP xmobarPP {
             ppOutput = hPutStrLn xmproc,
             ppTitle = xmobarColor "green" "" . shorten 50
-        } >> updatePointer (Relative 0.75 0.85)
+        } >> updatePointer (0.75,0.85)(1,1)
     } `additionalKeys`
         [
             ((controlMask .|. mod1Mask, xK_l), spawn "slock"),
