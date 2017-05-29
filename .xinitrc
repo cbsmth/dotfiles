@@ -2,7 +2,14 @@
 xsetroot -cursor_name left_ptr
 
 # Set background image
-feh --bg-fill /home/lfk/media/wallpaper/zelda-triforce.jpg &
+#feh --randomize --bg-fill ~/media/wallpaper/* &
+feh --bg-fill ~/media/wallpaper/majoras-mask.jpg &
+
+# Start pulseaudio?
+start-pulseaudio-x11 &
+
+# Add pulseaudio systray
+pasystray &
 
 #xrdb -merge ~/.Xresources
 #xrdb -merge ~/.Xdefaults
@@ -10,12 +17,11 @@ feh --bg-fill /home/lfk/media/wallpaper/zelda-triforce.jpg &
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
- --expand true --width 10 --transparent true --tint 0x000000 --height 12 &
+--expand true --width 10 --transparent true --alpha 0 --tint 0x000000 --height 12 &
 
 # Configure keyboard settings
-setxkbmap -option terminate:ctrl_alt_bksp # Enable Ctrl+Alt+Backspace for killing X
-#setxkbmap -layout se
-#xmodmap -e "keycode 21 = dead_acute dead_grave dead_acute dead_grave U007C notsign"
+setxkbmap -layout us -option terminate:ctrl_alt_bksp # Enable Ctrl+Alt+Backspace for killing X
+xmodmap -e "keycode 21 = dead_acute dead_grave dead_acute dead_grave U007C notsign"
 
 # Japanese input with uim
 #export GTK_IM_MODULE='uim'
