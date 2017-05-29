@@ -1,4 +1,5 @@
 let g:airline_powerline_fonts=1
+let g:syntastic_javascript_checkers = ['jscs', 'jshint', 'eslint']
 
 call pathogen#infect()
 syntax on
@@ -30,6 +31,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set undofile
+set fileencodings=utf8,iso-2022-jp,euc-jp,cp932,default,latin1
 "nnoremap <F5> :GundoToggle<CR>
 let mapleader = ","
 nnoremap/ /\v
@@ -60,8 +62,9 @@ nnoremap<C-j> <C-w>j
 nnoremap<C-k> <C-w>k
 nnoremap<C-l> <C-w>l
 
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
+colorscheme onedark
 
 set wildignore=*.class,*.un~,*.tmp
 set colorcolumn=80
